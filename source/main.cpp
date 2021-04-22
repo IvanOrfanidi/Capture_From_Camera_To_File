@@ -12,11 +12,11 @@ int main()
         return EXIT_FAILURE;
     }
 
-    const auto width = cap.get(cv::CAP_PROP_FRAME_WIDTH); // Get the width of frames of the video.
-    const auto height = cap.get(cv::CAP_PROP_FRAME_HEIGHT); // Get the height of frames of the video.
+    const double width = cap.get(cv::CAP_PROP_FRAME_WIDTH); // Get the width of frames of the video.
+    const double height = cap.get(cv::CAP_PROP_FRAME_HEIGHT); // Get the height of frames of the video.
     std::cout << "Resolution of the video: " << width << " x " << height << "." << std::endl;
 
-    const auto fps = cap.get(cv::CAP_PROP_FPS);
+    const double fps = cap.get(cv::CAP_PROP_FPS);
     std::cout << "Frames per seconds: " << fps << "." << std::endl;
 
     static constexpr std::string_view window_name = "My Camera";
